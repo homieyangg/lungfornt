@@ -4,7 +4,7 @@ import AddCategory from '../views/Category/AddCategory.vue'
 import Category from '../views/Category/Category.vue'
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -26,6 +26,7 @@ const routes = [
     name: 'Category',
     component: Category
   },
+  
 ]
 
 const router = createRouter({
