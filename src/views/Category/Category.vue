@@ -17,23 +17,16 @@ const axios = require("axios");
 import CategoryBox from "../../components/Category/CategoryBox.vue"
 export default {
   name: "Category",
+  props:["categories"],
   components:{CategoryBox},
   data() {
     return {
         baseURL: "http://localhost:8080",
-        categories: []
     };
   },
   methods: {
-    async getCategories(){
-        await axios.get(`${this.baseURL}/category/list`)
-        .then(res => this.categories = res.data)
-        .catch(err => console.log(err))
-    }
   },
-  mounted() {
-    this.getCategories();
-  }
+  mounted() {}
 };
 </script>
 <style scoped></style>
