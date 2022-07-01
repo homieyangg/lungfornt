@@ -8,7 +8,7 @@
           <!-- Header Logo Start -->
           <div class="col-lg-3 col-md-4 col-6">
             <div class="header-logo">
-              <a href="/home"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></a>
+              <a href="/"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></a>
             </div>
           </div>
           <!-- Header Logo End -->
@@ -21,7 +21,7 @@
                   <a href="#">關於我們</a>
                   <ul class="sub-menu">
                     <li><router-link to="/">Home</router-link></li>
-                    <li><a href="index-2.html">Home 2</a></li>
+                    <li><router-link :to="{name: 'Admin'}">Admin</router-link></li>
                     <li><a href="index-3.html">Home 3</a></li>
                     <li><a href="index-4.html">Home 4</a></li>
                   </ul>
@@ -32,7 +32,7 @@
                     <li class="mega-menu-col">
                       <h4 class="mega-menu-title">Shop Layout</h4>
                       <ul class="m-b-n10">
-                        <li><router-link to="/admin/category">List</router-link></li>
+                        <li><router-link :to="{name: 'Category'}">List</router-link></li>
                         <li><a href="../public/Category.html">Left Sidebar</a></li>
                         <li><a href="shop-right-sidebar.html">Right Sidebar</a></li>
                         <li><a href="shop-list-fullwidth.html">List Fullwidth</a></li>

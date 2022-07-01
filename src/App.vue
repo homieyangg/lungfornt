@@ -34,7 +34,7 @@
 
 </style>
 <script>
-import Navbar from './views/Category/Navbar.vue'
+import Navbar from './components/Navbar.vue'
 import axios from 'axios';
 export default {
   components:{Navbar},
@@ -56,7 +56,7 @@ export default {
 
       //api call to get the products
 
-      await axios.get(this.baseURL + "products/")
+      await axios.get(this.baseURL + "product/")
       .then(res => {
         this.products = res.data
       }).catch((err) => console.log('err', err));
