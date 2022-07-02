@@ -15,7 +15,7 @@
   </router-view>
 </template>
 
-<style>
+<style> 
  #demo {
             position: fixed;
             z-index: 299;
@@ -31,16 +31,16 @@
             transform: translateY(0px);
             transition: transform 0.3s ease 0s;
         }
-
 </style>
 <script>
 import Navbar from './components/Navbar.vue'
 import axios from 'axios';
+import HomeView from './views/HomeView.vue';
 export default {
-  components:{Navbar},
+  components:{ Navbar, HomeView },
   data(){
     return{
-      baseURL : "http://localhost:8080/",
+      baseURL : "http://localhost:9090/",
       products: [],
       categories: []
     }

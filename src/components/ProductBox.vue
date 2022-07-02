@@ -1,7 +1,7 @@
 <template>
-    <div class="card h-100 w-100">
+    <div class="card h-100 w-100" style="margin-top: 10px">
         <div class="embed-responsive embed-responsive-16by9">
-            <img :src="product.imageUrl" class="card-img-top embed-responsive-item" alt="...">
+            <img :src="product.imageURL" class="card-img-top embed-responsive-item" alt="...">
         </div>
         <div class="card-body">
             <h5 class="card-title">{{product.name}}</h5>

@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         <div v-for="category of categories" :key="category.id" class="col-xl-4 col-md-6 d-flex">
-            <CategoryBox :category="category"></CategoryBox>
+            <CategoryBox :category="category"/>
         </div>
     </div>
   </div>

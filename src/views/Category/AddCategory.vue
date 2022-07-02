@@ -49,7 +49,7 @@ export default {
         description: this.description,
         imageUrl: this.imageUrl,
       };
-      const baseURL = "http://localhost:8080";
+      const baseURL = "http://localhost:9090";
       axios({
         method: "post",
         url: `${baseURL}/category/create`,
