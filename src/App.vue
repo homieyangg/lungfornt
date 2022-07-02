@@ -1,5 +1,6 @@
 <template>
 <Navbar></Navbar>
+
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
@@ -13,34 +14,20 @@
   >
   
   </router-view>
+  <Footer></Footer>
 </template>
 
-<style> 
- #demo {
-            position: fixed;
-            z-index: 299;
-            width: 150px;
-            height: 150px;
-            font-size: 20px;
-            line-height: 36px;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            inset: auto 30px 30px auto;
-            cursor: pointer;
-            border-radius: 2px;
-            transform: translateY(0px);
-            transition: transform 0.3s ease 0s;
-        }
-</style>
+
 <script>
 import Navbar from './components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 import axios from 'axios';
 import HomeView from './views/HomeView.vue';
 export default {
-  components:{ Navbar, HomeView },
+  components:{ Navbar, HomeView, Footer },
   data(){
     return{
-      baseURL : "http://localhost:9090/",
+      baseURL : "http://localhost:8080/",
       products: [],
       categories: []
     }

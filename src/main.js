@@ -10,3 +10,4 @@ import "animate.js";
 createApp(category).use(router).mount('#category')
 createApp(Home).use(router).mount('#home')
 createApp(App).use(router).mount('#app')
+

@@ -8,7 +8,7 @@
                     <!-- Header Logo Start -->
                     <div class="col-lg-3 col-md-4 col-6">
                         <div class="header-logo">
-                            <router-link to="/"><img src="/assets/images/logo/logo.png" alt="Site Logo" /></router-link>
+                            <router-link to="/"><img src="assets/images/logo/logo.png" alt="Site Logo" /></router-link>
                         </div>
                     </div>
                     <!-- Header Logo End -->
@@ -275,3 +275,55 @@
     <!-- Header Bottom End -->
 
 </template>
+<style> 
+ #demo {
+            position: fixed;
+            z-index: 299;
+            width: 150px;
+            height: 150px;
+            font-size: 20px;
+            line-height: 36px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            inset: auto 30px 30px auto;
+            cursor: pointer;
+            border-radius: 2px;
+            transform: translateY(0px);
+            transition: transform 0.3s ease 0s;
+        }
+</style>
+<script>
+
+import { onMounted} from 'vue'
+
+export default {
+ setup () {
+
+    onMounted(() => {
+    $(".cart-visible").on('click', function(){
+      $(".header-cart-content").slideToggle("slow");
+    });
+
+    $(".action-execute").on('click', function() {
+      // If the clicked element has the active class, remove the active class from EVERY .nav-link>.state element
+      if ($(".action-execute, .header-search-form").hasClass("visible-execute")) {
+        $(".action-execute, .header-search-form").removeClass("visible-execute");
+      }
+      // Else, the element doesn't have the active class, so we remove it from every element before applying it to the element that was clicked
+      else {
+        $(".action-execute, .header-search-form").removeClass("visible-execute");
+        $(".action-execute, .header-search-form").addClass("visible-execute");
+      }
+    });
+    })
+
+     
+
+
+    return {}
+  }
+
+}
+
+
+</script>
